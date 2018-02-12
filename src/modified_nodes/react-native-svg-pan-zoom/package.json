@@ -1,0 +1,105 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-svg-pan-zoom",
+        "scope": null,
+        "escapedName": "react-native-svg-pan-zoom",
+        "name": "react-native-svg-pan-zoom",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "D:\\reactNative\\unibul-colors"
+    ]
+  ],
+  "_from": "react-native-svg-pan-zoom@latest",
+  "_id": "react-native-svg-pan-zoom@0.1.2",
+  "_inCache": true,
+  "_location": "/react-native-svg-pan-zoom",
+  "_nodeVersion": "6.12.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-svg-pan-zoom-0.1.2.tgz_1512654439273_0.21949310041964054"
+  },
+  "_npmUser": {
+    "name": "lukashedegaard",
+    "email": "lxhdgd@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-svg-pan-zoom",
+    "scope": null,
+    "escapedName": "react-native-svg-pan-zoom",
+    "name": "react-native-svg-pan-zoom",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-svg-pan-zoom/-/react-native-svg-pan-zoom-0.1.2.tgz",
+  "_shasum": "d86ff1b25e8dabdd75439d77dc55060bb413d9de",
+  "_shrinkwrap": null,
+  "_spec": "react-native-svg-pan-zoom",
+  "_where": "D:\\reactNative\\unibul-colors",
+  "authors": [
+    "Lukas Hedegaard <lxhdgd@gmail.com> (https://github.com/LukasHedegaard)",
+    "Søren Peter Andersen (https://github.com/sorenpa)"
+  ],
+  "bugs": {
+    "url": "https://github.com/garblovians/react-native-svg-pan-zoom/issues"
+  },
+  "dependencies": {},
+  "description": "Pan-zoom for react-native-svg via 'Google Maps'-style pinch and drag gestures",
+  "devDependencies": {
+    "@types/react": "^16.0.27",
+    "react": "^16.2.0",
+    "react-native": "^0.50.0",
+    "react-native-svg": "^6.0.0",
+    "typescript": "^2.6.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "d86ff1b25e8dabdd75439d77dc55060bb413d9de",
+    "tarball": "https://registry.npmjs.org/react-native-svg-pan-zoom/-/react-native-svg-pan-zoom-0.1.2.tgz"
+  },
+  "gitHead": "874e97ff4f707abbfa64c464fae8c4134c94d032",
+  "homepage": "https://github.com/garblovians/react-native-svg-pan-zoom#readme",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-native-svg",
+    "svg",
+    "map",
+    "canvas",
+    "pinch",
+    "pan",
+    "zoom",
+    "typescript",
+    "javascript"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "lukashedegaard",
+      "email": "lxhdgd@gmail.com"
+    }
+  ],
+  "name": "react-native-svg-pan-zoom",
+  "optionalDependencies": {},
+  "readme": "# react-native-svg-pan-zoom\nPan-zoom for [react-native-svg](https://github.com/react-native-community/react-native-svg) via \"Google Maps\"-style pinch and drag gestures.\n\n\n## Getting Started\n\n### Installing\n\n```\nnpm install --save react-native-svg-pan-zoom\n```\n\n## Usage\nSimply use SvgPanZoom as a wrapper and begin dropping components. Plain react-native-svg components will not react to clicks per default. To make things clickable, use the react-native PanResponder or wrap them in the included SvgPanZoomElement as shown below\n```js\nimport React, { Component } from 'react';\nimport { Circle } from 'react-native-svg';\nimport SvgPanZoom, { SvgPanZoomElement } from 'react-native-svg-pan-zoom';\n\nclass Example extends Component {\n\n  render() {\n    return (\n      <View style = {{ width: '100%', height:'100%' }}>\n\n        <SvgPanZoom\n          canvasHeight  = {500}\n          canvasWidth   = {500}\n          minScale      = {0.5}\n          initialZoom   = {0.7}\n          onZoom        = {(zoom) => { console.log('onZoom:' + zoom) }}\n          canvasStyle   = {{ backgroundColor: 'yellow' }}\n          viewStyle     = {{ backgroundColor: 'green'  }}\n        >\n\n          {/* Doesn't consume or respond to clicks */}\n          <Circle\n            cx          = {100}\n            cy          = {100}\n            r           = {42} \n            stroke      = \"red\"\n            strokeWidth = \"2.5\"\n            fill        = \"blue\"\n          />\n\n          {/* Responds to clicks */}\n          <SvgPanZoomElement\n            x ={50}\n            y ={50}\n            onClick         = {()=>{ console.log('onClick!') }}\n            onClickCanceled = {()=>{ console.log('onClickCanceled!') }}\n            onClickRelease  = {()=>{ console.log('onClickRelease!') }}\n            onDrag          = {()=>{ console.log('onDrag!') }}\n          >\n            <Circle\n              cx          = {42}\n              cy          = {42}\n              r           = {42} \n              stroke      = \"blue\"\n              strokeWidth = \"2.5\"\n              fill        = \"red\"\n            />\n          </SvgPanZoomElement>\n\n        </SvgPanZoom>\n\n      </View>\n    );\n  }\n}\n```\n\n## Additional notes\nThe drag and zoom gestures are constrained to never leave the SvgPanZoom canvas. It's size as well as scaling constraints can be set through props as shown in the above example.\n\nIt is recommended not to set maxScale above 1 as this results in blurred react-native-svg elements. Instead, increase your SVG element dimensions and set minScale lower.\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garblovians/react-native-svg-pan-zoom.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.2"
+}

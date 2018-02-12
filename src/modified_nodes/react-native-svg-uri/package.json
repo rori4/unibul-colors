@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-svg-uri@^1.2.3",
+        "scope": null,
+        "escapedName": "react-native-svg-uri",
+        "name": "react-native-svg-uri",
+        "rawSpec": "^1.2.3",
+        "spec": ">=1.2.3 <2.0.0",
+        "type": "range"
+      },
+      "D:\\reactNative\\unibul-colors"
+    ]
+  ],
+  "_from": "react-native-svg-uri@>=1.2.3 <2.0.0",
+  "_id": "react-native-svg-uri@1.2.3",
+  "_inCache": true,
+  "_location": "/react-native-svg-uri",
+  "_nodeVersion": "7.2.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-svg-uri-1.2.3.tgz_1510835923255_0.11322553572244942"
+  },
+  "_npmUser": {
+    "name": "matc4",
+    "email": "matias.s.cortes@gmail.com"
+  },
+  "_npmVersion": "4.1.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-svg-uri@^1.2.3",
+    "scope": null,
+    "escapedName": "react-native-svg-uri",
+    "name": "react-native-svg-uri",
+    "rawSpec": "^1.2.3",
+    "spec": ">=1.2.3 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-svg-uri/-/react-native-svg-uri-1.2.3.tgz",
+  "_shasum": "2f67f30564068a0fee68a751845332a5185a1aab",
+  "_shrinkwrap": null,
+  "_spec": "react-native-svg-uri@^1.2.3",
+  "_where": "D:\\reactNative\\unibul-colors",
+  "author": {
+    "name": "Matias Cortes"
+  },
+  "bugs": {
+    "url": "https://github.com/matiascba/react-native-svg-uri/issues"
+  },
+  "dependencies": {
+    "xmldom": "^0.1.22"
+  },
+  "description": "Render an SVG Image from an URL",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-react-native": "^2.1.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "2f67f30564068a0fee68a751845332a5185a1aab",
+    "tarball": "https://registry.npmjs.org/react-native-svg-uri/-/react-native-svg-uri-1.2.3.tgz"
+  },
+  "gitHead": "1e8b8d88afc5eef76754f2fe0a89b64804ab6da7",
+  "homepage": "https://github.com/matiascba/react-native-svg-uri#readme",
+  "keywords": [
+    "react-native",
+    "svg",
+    "url",
+    "uri",
+    "http"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "matc4",
+      "email": "matias.s.cortes@gmail.com"
+    }
+  ],
+  "name": "react-native-svg-uri",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native-svg": "^5.3.0"
+  },
+  "readme": "# react-native-svg-uri\nRender SVG images in React Native from an URL or a static file\n\nThis was tested with RN 0.33 and react-native-svg 4.3.1 (depends on this library)\n[react-native-svg](https://github.com/react-native-community/react-native-svg)\n\n\nNot all the svgs can be rendered, if you find problems fill an issue or a PR in\norder to contemplate all the cases\n\nInstall library from `npm`\n\n```bash\nnpm install react-native-svg-uri --save\n```\n\nLink library react-native-svg\n\n```bash\nreact-native link react-native-svg # not react-native-svg-uri !!!\n```\n\n## Props\n\n| Prop | Type | Default | Note |\n|---|---|---|---|\n| `source` | `ImageSource` |  | Same kind of `source` prop that `<Image />` component has\n| `svgXmlData` | `String` |  | You can pass the SVG as String directly\n| `fill` | `Color` |  | Overrides all fill attributes of the svg file\n\n## Known Bugs\n\n- [ANDROID] There is a problem with static SVG file on Android,\n  Works OK in debug mode but fails to load the file in release mode.\n  At the moment the only workaround is to pass the svg content in the svgXmlData prop.\n\n## <a name=\"Usage\">Usage</a>\n\nHere's a simple example:\n\n```javascript\nimport SvgUri from 'react-native-svg-uri';\n\nconst TestSvgUri = () => (\n  <View style={styles.container}>\n    <SvgUri\n      width=\"200\"\n      height=\"200\"\n      source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg'}}\n    />\n  </View>\n);\n```\n\nor a static file\n\n```javascript\n<SvgUri width=\"200\" height=\"200\" source={require('./img/homer.svg')} />\n```\n\nThis will render:\n\n![Component example](./screenshoots/sample.png)\n\n## Testing\n1. Make sure you have installed dependencies with `npm i`\n2. Run tests with `npm test`\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiascba/react-native-svg-uri.git"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
+  },
+  "version": "1.2.3"
+}

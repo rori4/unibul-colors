@@ -102112,11 +102112,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _reactNative = require(_dependencyMap[2], "react-native");
 
-  var _reactNativeSvgUri = require(_dependencyMap[3], "react-native-svg-uri");
+  var _reactNativeSvgUri = require(_dependencyMap[3], "./src/modified_nodes/react-native-svg-uri");
 
   var _reactNativeSvgUri2 = _interopRequireDefault(_reactNativeSvgUri);
 
-  var _reactNativeSvgPanZoom = require(_dependencyMap[4], "react-native-svg-pan-zoom");
+  var _reactNativeSvgPanZoom = require(_dependencyMap[4], "./src/modified_nodes/react-native-svg-pan-zoom");
 
   var _reactNativeSvgPanZoom2 = _interopRequireDefault(_reactNativeSvgPanZoom);
 
@@ -102147,8 +102147,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
     };
   }
 
-  var height = 500;
-  var width = 500;
+  var canvasHeight = 600;
+  var canvasWidth = 301;
 
   var App = _wrapComponent("App")(function (_Component) {
     _inherits(App, _Component);
@@ -102177,10 +102177,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
           _react3.default.createElement(
             _reactNativeSvgPanZoom2.default,
             {
-              canvasHeight: height,
-              canvasWidth: width,
-              minScale: 0.5,
-              initialZoom: 0.7,
+              canvasHeight: canvasHeight,
+              canvasWidth: canvasWidth,
+              minScale: 0.3,
+              maxScale: 3,
+              initialZoom: 0.5,
               canvasStyle: {
                 backgroundColor: "yellow"
               },
@@ -102193,14 +102194,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
               }
             },
             _react3.default.createElement(_reactNativeSvgUri2.default, {
-              width: width,
-              height: height,
+              width: canvasWidth,
+              height: canvasHeight,
               source: {
                 uri: "http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg"
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 23
+                lineNumber: 24
               }
             })
           )
@@ -102218,577 +102219,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       backgroundColor: "#ecf0f1"
     }
   });
-},764,[110,176,14,765,815],"d:\\reactNative\\unibul-colors\\App.js");
-__d(function (global, require, module, exports, _dependencyMap) {
-  var _react2 = require(_dependencyMap[0], "react");
-
-  var _react3 = _interopRequireDefault(_react2);
-
-  var _index = require(_dependencyMap[1], "./../react-transform-hmr/lib/index.js");
-
-  var _index2 = _interopRequireDefault(_index);
-
-  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-  var _jsxFileName = "d:\\reactNative\\unibul-colors\\node_modules\\react-native-svg-uri\\index.js";
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _reactNative = require(_dependencyMap[2], "react-native");
-
-  var _propTypes = require(_dependencyMap[3], "prop-types");
-
-  var _propTypes2 = _interopRequireDefault(_propTypes);
-
-  var _xmldom = require(_dependencyMap[4], "xmldom");
-
-  var _xmldom2 = _interopRequireDefault(_xmldom);
-
-  var _resolveAssetSource = require(_dependencyMap[5], "react-native/Libraries/Image/resolveAssetSource");
-
-  var _resolveAssetSource2 = _interopRequireDefault(_resolveAssetSource);
-
-  var _reactNativeSvg = require(_dependencyMap[6], "react-native-svg");
-
-  var _reactNativeSvg2 = _interopRequireDefault(_reactNativeSvg);
-
-  var _utils = require(_dependencyMap[7], "./utils");
-
-  var utils = _interopRequireWildcard(_utils);
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _components = {
-    SvgUri: {
-      displayName: "SvgUri"
-    }
-  };
-
-  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "d:/reactNative/unibul-colors/node_modules/react-native-svg-uri/index.js",
-    components: _components,
-    locals: [module],
-    imports: [_react3.default]
-  });
-
-  function _wrapComponent(id) {
-    return function (Component) {
-      return _reactTransformHmrLibIndexJs2(Component, id);
-    };
-  }
-
-  var ACCEPTED_SVG_ELEMENTS = ["svg", "g", "circle", "path", "rect", "defs", "line", "linearGradient", "radialGradient", "stop", "ellipse", "polygon", "polyline", "text", "tspan"];
-  var SVG_ATTS = ["viewBox", "width", "height"];
-  var G_ATTS = ["id"];
-  var CIRCLE_ATTS = ["cx", "cy", "r"];
-  var PATH_ATTS = ["d"];
-  var RECT_ATTS = ["width", "height"];
-  var LINE_ATTS = ["x1", "y1", "x2", "y2"];
-  var LINEARG_ATTS = LINE_ATTS.concat(["id", "gradientUnits"]);
-  var RADIALG_ATTS = CIRCLE_ATTS.concat(["id", "gradientUnits"]);
-  var STOP_ATTS = ["offset"];
-  var ELLIPSE_ATTS = ["cx", "cy", "rx", "ry"];
-  var TEXT_ATTS = ["fontFamily", "fontSize", "fontWeight"];
-  var POLYGON_ATTS = ["points"];
-  var POLYLINE_ATTS = ["points"];
-  var COMMON_ATTS = ["fill", "fillOpacity", "stroke", "strokeWidth", "strokeOpacity", "opacity", "strokeLinecap", "strokeLinejoin", "strokeDasharray", "strokeDashoffset", "x", "y", "rotate", "scale", "origin", "originX", "originY"];
-  var ind = 0;
-
-  function fixYPosition(y, node) {
-    if (node.attributes) {
-      var fontSizeAttr = Object.keys(node.attributes).find(function (a) {
-        return node.attributes[a].name === "font-size";
-      });
-
-      if (fontSizeAttr) {
-        return "" + (parseFloat(y) - parseFloat(node.attributes[fontSizeAttr].value));
-      }
-    }
-
-    if (!node.parentNode) {
-      return y;
-    }
-
-    return fixYPosition(y, node.parentNode);
-  }
-
-  var SvgUri = _wrapComponent("SvgUri")(function (_Component) {
-    _inherits(SvgUri, _Component);
-
-    function SvgUri(props) {
-      _classCallCheck(this, SvgUri);
-
-      var _this = _possibleConstructorReturn(this, (SvgUri.__proto__ || Object.getPrototypeOf(SvgUri)).call(this, props));
-
-      _this.state = {
-        fill: props.fill,
-        svgXmlData: props.svgXmlData
-      };
-      _this.createSVGElement = _this.createSVGElement.bind(_this);
-      _this.obtainComponentAtts = _this.obtainComponentAtts.bind(_this);
-      _this.inspectNode = _this.inspectNode.bind(_this);
-      _this.fetchSVGData = _this.fetchSVGData.bind(_this);
-      _this.isComponentMounted = false;
-
-      if (props.source) {
-        var source = (0, _resolveAssetSource2.default)(props.source) || {};
-
-        _this.fetchSVGData(source.uri);
-      }
-
-      return _this;
-    }
-
-    _createClass(SvgUri, [{
-      key: "componentWillMount",
-      value: function componentWillMount() {
-        this.isComponentMounted = true;
-      }
-    }, {
-      key: "componentWillReceiveProps",
-      value: function componentWillReceiveProps(nextProps) {
-        if (nextProps.source) {
-          var source = (0, _resolveAssetSource2.default)(nextProps.source) || {};
-          var oldSource = (0, _resolveAssetSource2.default)(this.props.source) || {};
-
-          if (source.uri !== oldSource.uri) {
-            this.fetchSVGData(source.uri);
-          }
-        }
-
-        if (nextProps.svgXmlData !== this.props.svgXmlData) {
-          this.setState({
-            svgXmlData: nextProps.svgXmlData
-          });
-        }
-
-        if (nextProps.fill !== this.props.fill) {
-          this.setState({
-            fill: nextProps.fill
-          });
-        }
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        this.isComponentMounted = false;
-      }
-    }, {
-      key: "fetchSVGData",
-      value: function fetchSVGData(uri) {
-        var responseXML, response;
-        return regeneratorRuntime.async(function fetchSVGData$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                responseXML = null;
-                _context.prev = 1;
-                _context.next = 4;
-                return regeneratorRuntime.awrap(fetch(uri));
-
-              case 4:
-                response = _context.sent;
-                _context.next = 7;
-                return regeneratorRuntime.awrap(response.text());
-
-              case 7:
-                responseXML = _context.sent;
-                _context.next = 13;
-                break;
-
-              case 10:
-                _context.prev = 10;
-                _context.t0 = _context["catch"](1);
-                console.error("ERROR SVG", _context.t0);
-
-              case 13:
-                _context.prev = 13;
-
-                if (this.isComponentMounted) {
-                  this.setState({
-                    svgXmlData: responseXML
-                  });
-                }
-
-                return _context.finish(13);
-
-              case 16:
-                return _context.abrupt("return", responseXML);
-
-              case 17:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, null, this, [[1, 10, 13, 16]]);
-      }
-    }, {
-      key: "trimElementChilden",
-      value: function trimElementChilden(children) {
-        for (var _iterator = children, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[typeof Symbol === "function" ? Symbol.iterator : "@@iterator"]();;) {
-          if (_isArray) {
-            if (_i >= _iterator.length) break;
-            child = _iterator[_i++];
-          } else {
-            _i = _iterator.next();
-            if (_i.done) break;
-            child = _i.value;
-          }
-
-          if (typeof child === "string") {
-            if (child.trim.length === 0) children.splice(children.indexOf(child), 1);
-          }
-        }
-      }
-    }, {
-      key: "createSVGElement",
-      value: function createSVGElement(node, childs) {
-        this.trimElementChilden(childs);
-        var componentAtts = {};
-        var i = ind++;
-
-        switch (node.nodeName) {
-          case "svg":
-            componentAtts = this.obtainComponentAtts(node, SVG_ATTS);
-
-            if (this.props.width) {
-              componentAtts.width = this.props.width;
-            }
-
-            if (this.props.height) {
-              componentAtts.height = this.props.height;
-            }
-
-            return _react3.default.createElement(
-              _reactNativeSvg2.default,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 188
-                }
-              }),
-              childs
-            );
-
-          case "g":
-            componentAtts = this.obtainComponentAtts(node, G_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.G,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 195
-                }
-              }),
-              childs
-            );
-
-          case "path":
-            componentAtts = this.obtainComponentAtts(node, PATH_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Path,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 202
-                }
-              }),
-              childs
-            );
-
-          case "circle":
-            componentAtts = this.obtainComponentAtts(node, CIRCLE_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Circle,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 209
-                }
-              }),
-              childs
-            );
-
-          case "rect":
-            componentAtts = this.obtainComponentAtts(node, RECT_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Rect,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 216
-                }
-              }),
-              childs
-            );
-
-          case "line":
-            componentAtts = this.obtainComponentAtts(node, LINE_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Line,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 223
-                }
-              }),
-              childs
-            );
-
-          case "defs":
-            return _react3.default.createElement(
-              _reactNativeSvg.Defs,
-              {
-                key: i,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 228
-                }
-              },
-              childs
-            );
-
-          case "linearGradient":
-            componentAtts = this.obtainComponentAtts(node, LINEARG_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.LinearGradient,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 232
-                }
-              }),
-              childs
-            );
-
-          case "radialGradient":
-            componentAtts = this.obtainComponentAtts(node, RADIALG_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.RadialGradient,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 239
-                }
-              }),
-              childs
-            );
-
-          case "stop":
-            componentAtts = this.obtainComponentAtts(node, STOP_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Stop,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 246
-                }
-              }),
-              childs
-            );
-
-          case "ellipse":
-            componentAtts = this.obtainComponentAtts(node, ELLIPSE_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Ellipse,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 253
-                }
-              }),
-              childs
-            );
-
-          case "polygon":
-            componentAtts = this.obtainComponentAtts(node, POLYGON_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Polygon,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 260
-                }
-              }),
-              childs
-            );
-
-          case "polyline":
-            componentAtts = this.obtainComponentAtts(node, POLYLINE_ATTS);
-            return _react3.default.createElement(
-              _reactNativeSvg.Polyline,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 267
-                }
-              }),
-              childs
-            );
-
-          case "text":
-            componentAtts = this.obtainComponentAtts(node, TEXT_ATTS);
-
-            if (componentAtts.y) {
-              componentAtts.y = fixYPosition(componentAtts.y, node);
-            }
-
-            return _react3.default.createElement(
-              _reactNativeSvg.Text,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 277
-                }
-              }),
-              childs
-            );
-
-          case "tspan":
-            componentAtts = this.obtainComponentAtts(node, TEXT_ATTS);
-
-            if (componentAtts.y) {
-              componentAtts.y = fixYPosition(componentAtts.y, node);
-            }
-
-            return _react3.default.createElement(
-              _reactNativeSvg.TSpan,
-              _extends({
-                key: i
-              }, componentAtts, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 287
-                }
-              }),
-              childs
-            );
-
-          default:
-            return null;
-        }
-      }
-    }, {
-      key: "obtainComponentAtts",
-      value: function obtainComponentAtts(_ref, enabledAttributes) {
-        var _this2 = this;
-
-        var attributes = _ref.attributes;
-        var styleAtts = {};
-        Array.from(attributes).forEach(function (_ref2) {
-          var nodeName = _ref2.nodeName,
-              nodeValue = _ref2.nodeValue;
-
-          _extends(styleAtts, utils.transformStyle({
-            nodeName: nodeName,
-            nodeValue: nodeValue,
-            fillProp: _this2.state.fill
-          }));
-        });
-        var componentAtts = Array.from(attributes).map(utils.camelCaseNodeName).map(utils.removePixelsFromNodeValue).filter(utils.getEnabledAttributes(enabledAttributes.concat(COMMON_ATTS))).reduce(function (acc, _ref3) {
-          var nodeName = _ref3.nodeName,
-              nodeValue = _ref3.nodeValue;
-          acc[nodeName] = _this2.state.fill && nodeName === "fill" && nodeValue !== "none" ? _this2.state.fill : nodeValue;
-          return acc;
-        }, {});
-
-        _extends(componentAtts, styleAtts);
-
-        return componentAtts;
-      }
-    }, {
-      key: "inspectNode",
-      value: function inspectNode(node) {
-        if (!ACCEPTED_SVG_ELEMENTS.includes(node.nodeName)) {
-          return null;
-        }
-
-        var arrayElements = [];
-
-        if (node.childNodes && node.childNodes.length > 0) {
-          for (var i = 0; i < node.childNodes.length; i++) {
-            var isTextValue = node.childNodes[i].nodeValue;
-
-            if (isTextValue) {
-              arrayElements.push(node.childNodes[i].nodeValue);
-            } else {
-              var nodo = this.inspectNode(node.childNodes[i]);
-
-              if (nodo != null) {
-                arrayElements.push(nodo);
-              }
-            }
-          }
-        }
-
-        return this.createSVGElement(node, arrayElements);
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        try {
-          if (this.state.svgXmlData == null) {
-            return null;
-          }
-
-          var inputSVG = this.state.svgXmlData.substring(this.state.svgXmlData.indexOf("<svg "), this.state.svgXmlData.indexOf("</svg>") + 6);
-          var doc = new _xmldom2.default.DOMParser().parseFromString(inputSVG);
-          var rootSVG = this.inspectNode(doc.childNodes[0]);
-          return rootSVG;
-        } catch (e) {
-          console.error("ERROR SVG", e);
-          return null;
-        }
-      }
-    }]);
-
-    return SvgUri;
-  }(_react2.Component));
-
-  SvgUri.propTypes = {
-    style: _propTypes2.default.object,
-    width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-    height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-    svgXmlData: _propTypes2.default.string,
-    source: _propTypes2.default.any,
-    fill: _propTypes2.default.string
-  };
-  module.exports = SvgUri;
-},765,[110,176,14,129,766,161,769,814],"react-native-svg-uri/index.js");
+},764,[110,176,14,821,823],"d:\\reactNative\\unibul-colors\\App.js");
 __d(function (global, require, module, exports, _dependencyMap) {
 	function DOMParser(options) {
 		this.options = options || {
@@ -109508,6 +108939,576 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 },813,[110,176,129,772,773],"react-native-svg/elements/ClipPath.js");
 __d(function (global, require, module, exports, _dependencyMap) {
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _jsxFileName = "d:\\reactNative\\unibul-colors\\src\\modified_nodes\\react-native-svg-uri\\index.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _propTypes = require(_dependencyMap[3], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _xmldom = require(_dependencyMap[4], "xmldom");
+
+  var _xmldom2 = _interopRequireDefault(_xmldom);
+
+  var _resolveAssetSource = require(_dependencyMap[5], "react-native/Libraries/Image/resolveAssetSource");
+
+  var _resolveAssetSource2 = _interopRequireDefault(_resolveAssetSource);
+
+  var _reactNativeSvg = require(_dependencyMap[6], "react-native-svg");
+
+  var _reactNativeSvg2 = _interopRequireDefault(_reactNativeSvg);
+
+  var _utils = require(_dependencyMap[7], "./utils");
+
+  var utils = _interopRequireWildcard(_utils);
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    SvgUri: {
+      displayName: "SvgUri"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "d:/reactNative/unibul-colors/src/modified_nodes/react-native-svg-uri/index.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var ACCEPTED_SVG_ELEMENTS = ["svg", "g", "circle", "path", "rect", "defs", "line", "linearGradient", "radialGradient", "stop", "ellipse", "polygon", "polyline", "text", "tspan"];
+  var SVG_ATTS = ["viewBox", "width", "height"];
+  var G_ATTS = ["id"];
+  var CIRCLE_ATTS = ["cx", "cy", "r"];
+  var PATH_ATTS = ["d"];
+  var RECT_ATTS = ["width", "height"];
+  var LINE_ATTS = ["x1", "y1", "x2", "y2"];
+  var LINEARG_ATTS = LINE_ATTS.concat(["id", "gradientUnits"]);
+  var RADIALG_ATTS = CIRCLE_ATTS.concat(["id", "gradientUnits"]);
+  var STOP_ATTS = ["offset"];
+  var ELLIPSE_ATTS = ["cx", "cy", "rx", "ry"];
+  var TEXT_ATTS = ["fontFamily", "fontSize", "fontWeight"];
+  var POLYGON_ATTS = ["points"];
+  var POLYLINE_ATTS = ["points"];
+  var COMMON_ATTS = ["fill", "fillOpacity", "stroke", "strokeWidth", "strokeOpacity", "opacity", "strokeLinecap", "strokeLinejoin", "strokeDasharray", "strokeDashoffset", "x", "y", "rotate", "scale", "origin", "originX", "originY"];
+  var ind = 0;
+
+  function fixYPosition(y, node) {
+    if (node.attributes) {
+      var fontSizeAttr = Object.keys(node.attributes).find(function (a) {
+        return node.attributes[a].name === "font-size";
+      });
+
+      if (fontSizeAttr) {
+        return "" + (parseFloat(y) - parseFloat(node.attributes[fontSizeAttr].value));
+      }
+    }
+
+    if (!node.parentNode) {
+      return y;
+    }
+
+    return fixYPosition(y, node.parentNode);
+  }
+
+  var SvgUri = _wrapComponent("SvgUri")(function (_Component) {
+    _inherits(SvgUri, _Component);
+
+    function SvgUri(props) {
+      _classCallCheck(this, SvgUri);
+
+      var _this = _possibleConstructorReturn(this, (SvgUri.__proto__ || Object.getPrototypeOf(SvgUri)).call(this, props));
+
+      _this.state = {
+        fill: props.fill,
+        svgXmlData: props.svgXmlData
+      };
+      _this.createSVGElement = _this.createSVGElement.bind(_this);
+      _this.obtainComponentAtts = _this.obtainComponentAtts.bind(_this);
+      _this.inspectNode = _this.inspectNode.bind(_this);
+      _this.fetchSVGData = _this.fetchSVGData.bind(_this);
+      _this.isComponentMounted = false;
+
+      if (props.source) {
+        var source = (0, _resolveAssetSource2.default)(props.source) || {};
+
+        _this.fetchSVGData(source.uri);
+      }
+
+      return _this;
+    }
+
+    _createClass(SvgUri, [{
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        this.isComponentMounted = true;
+      }
+    }, {
+      key: "componentWillReceiveProps",
+      value: function componentWillReceiveProps(nextProps) {
+        if (nextProps.source) {
+          var source = (0, _resolveAssetSource2.default)(nextProps.source) || {};
+          var oldSource = (0, _resolveAssetSource2.default)(this.props.source) || {};
+
+          if (source.uri !== oldSource.uri) {
+            this.fetchSVGData(source.uri);
+          }
+        }
+
+        if (nextProps.svgXmlData !== this.props.svgXmlData) {
+          this.setState({
+            svgXmlData: nextProps.svgXmlData
+          });
+        }
+
+        if (nextProps.fill !== this.props.fill) {
+          this.setState({
+            fill: nextProps.fill
+          });
+        }
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        this.isComponentMounted = false;
+      }
+    }, {
+      key: "fetchSVGData",
+      value: function fetchSVGData(uri) {
+        var responseXML, response;
+        return regeneratorRuntime.async(function fetchSVGData$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                responseXML = null;
+                _context.prev = 1;
+                _context.next = 4;
+                return regeneratorRuntime.awrap(fetch(uri));
+
+              case 4:
+                response = _context.sent;
+                _context.next = 7;
+                return regeneratorRuntime.awrap(response.text());
+
+              case 7:
+                responseXML = _context.sent;
+                _context.next = 13;
+                break;
+
+              case 10:
+                _context.prev = 10;
+                _context.t0 = _context["catch"](1);
+                console.error("ERROR SVG", _context.t0);
+
+              case 13:
+                _context.prev = 13;
+
+                if (this.isComponentMounted) {
+                  this.setState({
+                    svgXmlData: responseXML
+                  });
+                }
+
+                return _context.finish(13);
+
+              case 16:
+                return _context.abrupt("return", responseXML);
+
+              case 17:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, null, this, [[1, 10, 13, 16]]);
+      }
+    }, {
+      key: "trimElementChilden",
+      value: function trimElementChilden(children) {
+        for (var _iterator = children, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[typeof Symbol === "function" ? Symbol.iterator : "@@iterator"]();;) {
+          if (_isArray) {
+            if (_i >= _iterator.length) break;
+            child = _iterator[_i++];
+          } else {
+            _i = _iterator.next();
+            if (_i.done) break;
+            child = _i.value;
+          }
+
+          if (typeof child === "string") {
+            if (child.trim.length === 0) children.splice(children.indexOf(child), 1);
+          }
+        }
+      }
+    }, {
+      key: "createSVGElement",
+      value: function createSVGElement(node, childs) {
+        this.trimElementChilden(childs);
+        var componentAtts = {};
+        var i = ind++;
+
+        switch (node.nodeName) {
+          case "svg":
+            componentAtts = this.obtainComponentAtts(node, SVG_ATTS);
+
+            if (this.props.width) {
+              componentAtts.width = this.props.width;
+            }
+
+            if (this.props.height) {
+              componentAtts.height = this.props.height;
+            }
+
+            return _react3.default.createElement(
+              _reactNativeSvg2.default,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 188
+                }
+              }),
+              childs
+            );
+
+          case "g":
+            componentAtts = this.obtainComponentAtts(node, G_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.G,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 195
+                }
+              }),
+              childs
+            );
+
+          case "path":
+            componentAtts = this.obtainComponentAtts(node, PATH_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Path,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 202
+                }
+              }),
+              childs
+            );
+
+          case "circle":
+            componentAtts = this.obtainComponentAtts(node, CIRCLE_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Circle,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 209
+                }
+              }),
+              childs
+            );
+
+          case "rect":
+            componentAtts = this.obtainComponentAtts(node, RECT_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Rect,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 216
+                }
+              }),
+              childs
+            );
+
+          case "line":
+            componentAtts = this.obtainComponentAtts(node, LINE_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Line,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 223
+                }
+              }),
+              childs
+            );
+
+          case "defs":
+            return _react3.default.createElement(
+              _reactNativeSvg.Defs,
+              {
+                key: i,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 228
+                }
+              },
+              childs
+            );
+
+          case "linearGradient":
+            componentAtts = this.obtainComponentAtts(node, LINEARG_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.LinearGradient,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 232
+                }
+              }),
+              childs
+            );
+
+          case "radialGradient":
+            componentAtts = this.obtainComponentAtts(node, RADIALG_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.RadialGradient,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 239
+                }
+              }),
+              childs
+            );
+
+          case "stop":
+            componentAtts = this.obtainComponentAtts(node, STOP_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Stop,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 246
+                }
+              }),
+              childs
+            );
+
+          case "ellipse":
+            componentAtts = this.obtainComponentAtts(node, ELLIPSE_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Ellipse,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 253
+                }
+              }),
+              childs
+            );
+
+          case "polygon":
+            componentAtts = this.obtainComponentAtts(node, POLYGON_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Polygon,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 260
+                }
+              }),
+              childs
+            );
+
+          case "polyline":
+            componentAtts = this.obtainComponentAtts(node, POLYLINE_ATTS);
+            return _react3.default.createElement(
+              _reactNativeSvg.Polyline,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 267
+                }
+              }),
+              childs
+            );
+
+          case "text":
+            componentAtts = this.obtainComponentAtts(node, TEXT_ATTS);
+
+            if (componentAtts.y) {
+              componentAtts.y = fixYPosition(componentAtts.y, node);
+            }
+
+            return _react3.default.createElement(
+              _reactNativeSvg.Text,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 277
+                }
+              }),
+              childs
+            );
+
+          case "tspan":
+            componentAtts = this.obtainComponentAtts(node, TEXT_ATTS);
+
+            if (componentAtts.y) {
+              componentAtts.y = fixYPosition(componentAtts.y, node);
+            }
+
+            return _react3.default.createElement(
+              _reactNativeSvg.TSpan,
+              _extends({
+                key: i
+              }, componentAtts, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 287
+                }
+              }),
+              childs
+            );
+
+          default:
+            return null;
+        }
+      }
+    }, {
+      key: "obtainComponentAtts",
+      value: function obtainComponentAtts(_ref, enabledAttributes) {
+        var _this2 = this;
+
+        var attributes = _ref.attributes;
+        var styleAtts = {};
+        Array.from(attributes).forEach(function (_ref2) {
+          var nodeName = _ref2.nodeName,
+              nodeValue = _ref2.nodeValue;
+
+          _extends(styleAtts, utils.transformStyle({
+            nodeName: nodeName,
+            nodeValue: nodeValue,
+            fillProp: _this2.state.fill
+          }));
+        });
+        var componentAtts = Array.from(attributes).map(utils.camelCaseNodeName).map(utils.removePixelsFromNodeValue).filter(utils.getEnabledAttributes(enabledAttributes.concat(COMMON_ATTS))).reduce(function (acc, _ref3) {
+          var nodeName = _ref3.nodeName,
+              nodeValue = _ref3.nodeValue;
+          acc[nodeName] = _this2.state.fill && nodeName === "fill" && nodeValue !== "none" ? _this2.state.fill : nodeValue;
+          return acc;
+        }, {});
+
+        _extends(componentAtts, styleAtts);
+
+        return componentAtts;
+      }
+    }, {
+      key: "inspectNode",
+      value: function inspectNode(node) {
+        if (!ACCEPTED_SVG_ELEMENTS.includes(node.nodeName)) {
+          return null;
+        }
+
+        var arrayElements = [];
+
+        if (node.childNodes && node.childNodes.length > 0) {
+          for (var i = 0; i < node.childNodes.length; i++) {
+            var isTextValue = node.childNodes[i].nodeValue;
+
+            if (isTextValue) {
+              arrayElements.push(node.childNodes[i].nodeValue);
+            } else {
+              var nodo = this.inspectNode(node.childNodes[i]);
+
+              if (nodo != null) {
+                arrayElements.push(nodo);
+              }
+            }
+          }
+        }
+
+        return this.createSVGElement(node, arrayElements);
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        try {
+          if (this.state.svgXmlData == null) {
+            return null;
+          }
+
+          var inputSVG = this.state.svgXmlData.substring(this.state.svgXmlData.indexOf("<svg "), this.state.svgXmlData.indexOf("</svg>") + 6);
+          var doc = new _xmldom2.default.DOMParser().parseFromString(inputSVG);
+          var rootSVG = this.inspectNode(doc.childNodes[0]);
+          return rootSVG;
+        } catch (e) {
+          console.error("ERROR SVG", e);
+          return null;
+        }
+      }
+    }]);
+
+    return SvgUri;
+  }(_react2.Component));
+
+  SvgUri.propTypes = {
+    style: _propTypes2.default.object,
+    width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    svgXmlData: _propTypes2.default.string,
+    source: _propTypes2.default.any,
+    fill: _propTypes2.default.string
+  };
+  module.exports = SvgUri;
+},821,[110,176,14,129,766,161,769,822],"react-native-svg-uri/index.js");
+__d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
@@ -109567,7 +109568,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       return enabledAttributes.includes(camelCase(nodeName));
     };
   };
-},814,[],"react-native-svg-uri/utils.js");
+},822,[],"react-native-svg-uri/utils.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -109584,427 +109585,438 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   exports.default = _SvgPanZoom2.default;
   exports.SvgPanZoomElement = _shapes.ResponderElement;
-},815,[816,818],"react-native-svg-pan-zoom/index.js");
+},823,[824,826],"react-native-svg-pan-zoom/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
 
-    var _react2 = require(_dependencyMap[0], "react");
+  var _react2 = require(_dependencyMap[0], "react");
 
-    var _react3 = _interopRequireDefault(_react2);
+  var _react3 = _interopRequireDefault(_react2);
 
-    var _index = require(_dependencyMap[1], "./../react-transform-hmr/lib/index.js");
+  var _index = require(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js");
 
-    var _index2 = _interopRequireDefault(_index);
+  var _index2 = _interopRequireDefault(_index);
 
-    var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-    var _jsxFileName = "d:\\reactNative\\unibul-colors\\node_modules\\react-native-svg-pan-zoom\\SvgPanZoom.js";
+  var _jsxFileName = "d:\\reactNative\\unibul-colors\\src\\modified_nodes\\react-native-svg-pan-zoom\\SvgPanZoom.js";
 
-    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-    var _reactNative = require(_dependencyMap[2], "react-native");
+  var _reactNative = require(_dependencyMap[2], "react-native");
 
-    var _reactNativeSvg = require(_dependencyMap[3], "react-native-svg");
+  var _reactNativeSvg = require(_dependencyMap[3], "react-native-svg");
 
-    var _reactNativeSvg2 = _interopRequireDefault(_reactNativeSvg);
+  var _reactNativeSvg2 = _interopRequireDefault(_reactNativeSvg);
 
-    var _util = require(_dependencyMap[4], "./util");
+  var _util = require(_dependencyMap[4], "./util");
 
-    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    var _components = {
-        SvgPanZoom: {
-            displayName: "SvgPanZoom"
-        }
+  var _components = {
+    SvgPanZoom: {
+      displayName: "SvgPanZoom"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "d:/reactNative/unibul-colors/src/modified_nodes/react-native-svg-pan-zoom/SvgPanZoom.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
     };
+  }
 
-    var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-        filename: "d:/reactNative/unibul-colors/node_modules/react-native-svg-pan-zoom/SvgPanZoom.js",
-        components: _components,
-        locals: [module],
-        imports: [_react3.default]
-    });
+  var SvgView = _reactNativeSvg2.default;
 
-    function _wrapComponent(id) {
-        return function (Component) {
-            return _reactTransformHmrLibIndexJs2(Component, id);
+  var _Dimensions$get = _reactNative.Dimensions.get('window'),
+      width = _Dimensions$get.width,
+      height = _Dimensions$get.height;
+
+  var SvgPanZoom = _wrapComponent("SvgPanZoom")(function (_Component) {
+    _inherits(SvgPanZoom, _Component);
+
+    function SvgPanZoom(props) {
+      _classCallCheck(this, SvgPanZoom);
+
+      var _this = _possibleConstructorReturn(this, (SvgPanZoom.__proto__ || Object.getPrototypeOf(SvgPanZoom)).call(this, props));
+
+      _this.dropNextEvt = 0;
+
+      _this._onLayout = function (event) {
+        _this.mainViewRef.measure(function (x, y, w, h, pageX, pageY) {
+          _this.setState({
+            viewDimensions: {
+              height: h,
+              width: w,
+              pageX: pageX,
+              pageY: pageY
+            },
+            layoutKnown: true
+          });
+        });
+      };
+
+      _this.zoomToPoint = function (x, y, scale) {
+        var duration = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 700;
+        var viewDimensions = _this.state.viewDimensions;
+        var _this$props = _this.props,
+            canvasHeight = _this$props.canvasHeight,
+            canvasWidth = _this$props.canvasWidth;
+        var zoomPoint = {
+          x: -x * scale + viewDimensions.width / 2,
+          y: -y * scale + viewDimensions.height / 2
         };
+        var zoomDisplacement = {
+          x: -(canvasWidth - canvasWidth * scale) / 2,
+          y: -(canvasHeight - canvasHeight * scale) / 2
+        };
+        var pan = {
+          x: zoomPoint.x + zoomDisplacement.x,
+          y: zoomPoint.y + zoomDisplacement.y
+        };
+        var viewTransform = {
+          scaleX: scale,
+          scaleY: scale,
+          skewX: 0,
+          skewY: 0,
+          translateX: pan.x,
+          translateY: pan.y
+        };
+
+        _reactNative.Animated.parallel([_reactNative.Animated.timing(_this.state.TranslationAnimation, {
+          toValue: {
+            x: viewTransform.translateX,
+            y: viewTransform.translateY
+          },
+          duration: duration,
+          useNativeDriver: true
+        }), _reactNative.Animated.timing(_this.state.scaleAnimation, {
+          toValue: viewTransform.scaleX,
+          duration: duration,
+          useNativeDriver: true
+        })]).start();
+
+        _this.setState({
+          viewTransform: viewTransform
+        });
+      };
+
+      _this.processPinch = function (x1, y1, x2, y2) {
+        var distance = (0, _util.calcDistance)(x1, y1, x2, y2);
+
+        if (!_this.state.isScaling) {
+          _this.setState({
+            isScaling: true,
+            initialDistance: distance,
+            initialTransform: _this.state.viewTransform
+          });
+
+          return;
+        }
+
+        var center = (0, _util.calcCenter)(x1, y1, x2, y2);
+        var _this$state = _this.state,
+            viewTransform = _this$state.viewTransform,
+            initialDistance = _this$state.initialDistance,
+            initialTransform = _this$state.initialTransform,
+            viewDimensions = _this$state.viewDimensions;
+        var _this$props2 = _this.props,
+            canvasHeight = _this$props2.canvasHeight,
+            canvasWidth = _this$props2.canvasWidth,
+            minScale = _this$props2.minScale,
+            maxScale = _this$props2.maxScale;
+        var _this$props3 = _this.props,
+            windowWidth = _this$props3.windowWidth,
+            windowHeight = _this$props3.windowHeight;
+        var touchZoom = distance / initialDistance;
+        var zoomScale = touchZoom * initialTransform.scaleX / viewTransform.scaleX;
+        var panOffset = {
+          x: initialTransform.translateX + viewDimensions.pageX,
+          y: initialTransform.translateY + viewDimensions.pageY
+        };
+        var pinchCenterPoint = {
+          x: center.x - panOffset.x,
+          y: center.y - panOffset.y
+        };
+        var canvasCenter = {
+          x: canvasWidth / 2,
+          y: canvasHeight / 2
+        };
+        var initialZoomDisplacement = {
+          x: pinchCenterPoint.x - canvasCenter.x - (pinchCenterPoint.x - canvasCenter.x) / initialTransform.scaleX,
+          y: pinchCenterPoint.y - canvasCenter.y - (pinchCenterPoint.y - canvasCenter.y) / initialTransform.scaleY
+        };
+        var zoomPoint = {
+          x: canvasCenter.x - pinchCenterPoint.x + initialZoomDisplacement.x,
+          y: canvasCenter.y - pinchCenterPoint.y + initialZoomDisplacement.y
+        };
+        var zoomDisplacement = {
+          x: -(zoomPoint.x - zoomPoint.x * zoomScale),
+          y: -(zoomPoint.y - zoomPoint.y * zoomScale)
+        };
+        var scalingMatrix = (0, _util.createScalingMatrix)(zoomScale);
+        var tranlationMatrix = (0, _util.createTranslationMatrix)(zoomDisplacement.x, zoomDisplacement.y);
+        var transform = (0, _util.viewTransformMult)(tranlationMatrix, scalingMatrix);
+        var newTransform = (0, _util.getBoundedPinchTransform)(viewTransform, (0, _util.viewTransformMult)(viewTransform, transform), minScale, maxScale);
+
+        _reactNative.Animated.parallel([_reactNative.Animated.timing(_this.state.TranslationAnimation, {
+          toValue: {
+            x: newTransform.translateX,
+            y: newTransform.translateY
+          },
+          duration: 0,
+          useNativeDriver: true
+        }), _reactNative.Animated.timing(_this.state.scaleAnimation, {
+          toValue: newTransform.scaleX,
+          duration: 0,
+          useNativeDriver: true
+        })]).start();
+
+        _this.setState({
+          viewTransform: newTransform
+        });
+      };
+
+      _this.processTouch = function (gestureState) {
+        if (!_this.state.isMoving) {
+          _this.setState({
+            isMoving: true,
+            initialGestureState: {
+              dy: 0,
+              dx: 0
+            },
+            initialTransform: _this.state.viewTransform
+          });
+
+          return;
+        }
+
+        var _this$state2 = _this.state,
+            viewTransform = _this$state2.viewTransform,
+            initialGestureState = _this$state2.initialGestureState,
+            initialTransform = _this$state2.initialTransform,
+            viewDimensions = _this$state2.viewDimensions;
+        var _this$props4 = _this.props,
+            canvasWidth = _this$props4.canvasWidth,
+            canvasHeight = _this$props4.canvasHeight;
+        var displacement = {
+          x: (gestureState.dx - initialGestureState.dx) / viewTransform.scaleX,
+          y: (gestureState.dy - initialGestureState.dy) / viewTransform.scaleY
+        };
+        var tranlationMatrix = (0, _util.createTranslationMatrix)(displacement.x, displacement.y);
+        var newTransform = (0, _util.getBoundedTouchTransform)(initialTransform, viewTransform, (0, _util.viewTransformMult)(viewTransform, tranlationMatrix), viewDimensions, canvasWidth, canvasHeight);
+
+        _reactNative.Animated.timing(_this.state.TranslationAnimation, {
+          toValue: {
+            x: newTransform.translateX,
+            y: newTransform.translateY
+          },
+          duration: 0,
+          useNativeDriver: true
+        }).start();
+
+        _this.setState({
+          viewTransform: newTransform,
+          initialGestureState: {
+            dx: gestureState.dx,
+            dy: gestureState.dy
+          }
+        });
+      };
+
+      var vt = _this.getInitialViewTransform(props.canvasWidth, props.canvasHeight, props.initialZoom);
+
+      _this.state = {
+        layoutKnown: false,
+        viewDimensions: {
+          height: 0,
+          width: 0,
+          pageX: 0,
+          pageY: 0
+        },
+        viewTransform: vt,
+        isScaling: false,
+        initialDistance: 1,
+        initialTransform: (0, _util.createIdentityTransform)(),
+        initialScale: props.initialZoom,
+        initialTranslation: {
+          x: 0,
+          y: 0
+        },
+        isMoving: false,
+        initialGestureState: {
+          dx: 0,
+          dy: 0
+        },
+        TranslationAnimation: new _reactNative.Animated.ValueXY({
+          x: vt.translateX,
+          y: vt.translateY
+        }),
+        scaleAnimation: new _reactNative.Animated.Value(vt.scaleX)
+      };
+      return _this;
     }
 
-    var SvgView = _reactNativeSvg2.default;
+    _createClass(SvgPanZoom, [{
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        var _this2 = this;
 
-    var SvgPanZoom = _wrapComponent("SvgPanZoom")(function (_Component) {
-        _inherits(SvgPanZoom, _Component);
+        this.state.scaleAnimation.addListener(function (zoom) {
+          _this2.props.onZoom(zoom.value);
+        });
+        this.prInstance = _reactNative.PanResponder.create({
+          onStartShouldSetPanResponder: function onStartShouldSetPanResponder(evt, gestureState) {
+            return false;
+          },
+          onStartShouldSetPanResponderCapture: function onStartShouldSetPanResponderCapture(evt, gestureState) {
+            return false;
+          },
+          onMoveShouldSetPanResponder: function onMoveShouldSetPanResponder(evt, gestureState) {
+            return true;
+          },
+          onMoveShouldSetPanResponderCapture: function onMoveShouldSetPanResponderCapture(evt, gestureState) {
+            return false;
+          },
+          onPanResponderGrant: function onPanResponderGrant(evt, gestureState) {
+            if (_this2.prTargetSelf == null) {
+              if (_this2.prTargetOuter == null) {
+                _this2.prTargetOuter = evt.currentTarget;
+              }
 
-        function SvgPanZoom(props) {
-            _classCallCheck(this, SvgPanZoom);
-
-            var _this = _possibleConstructorReturn(this, (SvgPanZoom.__proto__ || Object.getPrototypeOf(SvgPanZoom)).call(this, props));
-
-            _this.dropNextEvt = 0;
-
-            _this._onLayout = function (event) {
-                _this.mainViewRef.measure(function (x, y, w, h, pageX, pageY) {
-                    _this.setState({
-                        viewDimensions: {
-                            height: h,
-                            width: w,
-                            pageX: pageX,
-                            pageY: pageY
-                        },
-                        layoutKnown: true
-                    });
-                });
-            };
-
-            _this.zoomToPoint = function (x, y, scale) {
-                var duration = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 700;
-                var viewDimensions = _this.state.viewDimensions;
-                var _this$props = _this.props,
-                    canvasHeight = _this$props.canvasHeight,
-                    canvasWidth = _this$props.canvasWidth;
-                var zoomPoint = {
-                    x: -x * scale + viewDimensions.width / 2,
-                    y: -y * scale + viewDimensions.height / 2
-                };
-                var zoomDisplacement = {
-                    x: -(canvasWidth - canvasWidth * scale) / 2,
-                    y: -(canvasHeight - canvasHeight * scale) / 2
-                };
-                var pan = {
-                    x: zoomPoint.x + zoomDisplacement.x,
-                    y: zoomPoint.y + zoomDisplacement.y
-                };
-                var viewTransform = {
-                    scaleX: scale,
-                    scaleY: scale,
-                    skewX: 0,
-                    skewY: 0,
-                    translateX: pan.x,
-                    translateY: pan.y
-                };
-
-                _reactNative.Animated.parallel([_reactNative.Animated.timing(_this.state.TranslationAnimation, {
-                    toValue: {
-                        x: viewTransform.translateX,
-                        y: viewTransform.translateY
-                    },
-                    duration: duration,
-                    useNativeDriver: true
-                }), _reactNative.Animated.timing(_this.state.scaleAnimation, {
-                    toValue: viewTransform.scaleX,
-                    duration: duration,
-                    useNativeDriver: true
-                })]).start();
-
-                _this.setState({
-                    viewTransform: viewTransform
-                });
-            };
-
-            _this.processPinch = function (x1, y1, x2, y2) {
-                var distance = (0, _util.calcDistance)(x1, y1, x2, y2);
-
-                if (!_this.state.isScaling) {
-                    _this.setState({
-                        isScaling: true,
-                        initialDistance: distance,
-                        initialTransform: _this.state.viewTransform
-                    });
-
-                    return;
-                }
-
-                var center = (0, _util.calcCenter)(x1, y1, x2, y2);
-                var _this$state = _this.state,
-                    viewTransform = _this$state.viewTransform,
-                    initialDistance = _this$state.initialDistance,
-                    initialTransform = _this$state.initialTransform,
-                    viewDimensions = _this$state.viewDimensions;
-                var _this$props2 = _this.props,
-                    canvasHeight = _this$props2.canvasHeight,
-                    canvasWidth = _this$props2.canvasWidth,
-                    minScale = _this$props2.minScale,
-                    maxScale = _this$props2.maxScale;
-                var touchZoom = distance / initialDistance;
-                var zoomScale = touchZoom * initialTransform.scaleX / viewTransform.scaleX;
-                var panOffset = {
-                    x: initialTransform.translateX + viewDimensions.pageX,
-                    y: initialTransform.translateY + viewDimensions.pageY
-                };
-                var pinchCenterPoint = {
-                    x: center.x - panOffset.x,
-                    y: center.y - panOffset.y
-                };
-                var canvasCenter = {
-                    x: canvasWidth / 2,
-                    y: canvasHeight / 2
-                };
-                var initialZoomDisplacement = {
-                    x: pinchCenterPoint.x - canvasCenter.x - (pinchCenterPoint.x - canvasCenter.x) / initialTransform.scaleX,
-                    y: pinchCenterPoint.y - canvasCenter.y - (pinchCenterPoint.y - canvasCenter.y) / initialTransform.scaleY
-                };
-                var zoomPoint = {
-                    x: canvasCenter.x - pinchCenterPoint.x + initialZoomDisplacement.x,
-                    y: canvasCenter.y - pinchCenterPoint.y + initialZoomDisplacement.y
-                };
-                var zoomDisplacement = {
-                    x: -(zoomPoint.x - zoomPoint.x * zoomScale),
-                    y: -(zoomPoint.y - zoomPoint.y * zoomScale)
-                };
-                var scalingMatrix = (0, _util.createScalingMatrix)(zoomScale);
-                var tranlationMatrix = (0, _util.createTranslationMatrix)(zoomDisplacement.x, zoomDisplacement.y);
-                var transform = (0, _util.viewTransformMult)(tranlationMatrix, scalingMatrix);
-                var newTransform = (0, _util.getBoundedPinchTransform)(viewTransform, (0, _util.viewTransformMult)(viewTransform, transform), minScale, maxScale);
-
-                _reactNative.Animated.parallel([_reactNative.Animated.timing(_this.state.TranslationAnimation, {
-                    toValue: {
-                        x: newTransform.translateX,
-                        y: newTransform.translateY
-                    },
-                    duration: 0,
-                    useNativeDriver: true
-                }), _reactNative.Animated.timing(_this.state.scaleAnimation, {
-                    toValue: newTransform.scaleX,
-                    duration: 0,
-                    useNativeDriver: true
-                })]).start();
-
-                _this.setState({
-                    viewTransform: newTransform
-                });
-            };
-
-            _this.processTouch = function (gestureState) {
-                if (!_this.state.isMoving) {
-                    _this.setState({
-                        isMoving: true,
-                        initialGestureState: {
-                            dy: 0,
-                            dx: 0
-                        },
-                        initialTransform: _this.state.viewTransform
-                    });
-
-                    return;
-                }
-
-                var _this$state2 = _this.state,
-                    viewTransform = _this$state2.viewTransform,
-                    initialGestureState = _this$state2.initialGestureState,
-                    initialTransform = _this$state2.initialTransform,
-                    viewDimensions = _this$state2.viewDimensions;
-                var _this$props3 = _this.props,
-                    canvasWidth = _this$props3.canvasWidth,
-                    canvasHeight = _this$props3.canvasHeight;
-                var displacement = {
-                    x: (gestureState.dx - initialGestureState.dx) / viewTransform.scaleX,
-                    y: (gestureState.dy - initialGestureState.dy) / viewTransform.scaleY
-                };
-                var tranlationMatrix = (0, _util.createTranslationMatrix)(displacement.x, displacement.y);
-                var newTransform = (0, _util.getBoundedTouchTransform)(initialTransform, viewTransform, (0, _util.viewTransformMult)(viewTransform, tranlationMatrix), viewDimensions, canvasWidth, canvasHeight);
-
-                _reactNative.Animated.timing(_this.state.TranslationAnimation, {
-                    toValue: {
-                        x: newTransform.translateX,
-                        y: newTransform.translateY
-                    },
-                    duration: 0,
-                    useNativeDriver: true
-                }).start();
-
-                _this.setState({
-                    viewTransform: newTransform,
-                    initialGestureState: {
-                        dx: gestureState.dx,
-                        dy: gestureState.dy
-                    }
-                });
-            };
-
-            var vt = _this.getInitialViewTransform(props.canvasWidth, props.canvasHeight, props.initialZoom);
-
-            _this.state = {
-                layoutKnown: false,
-                viewDimensions: {
-                    height: 0,
-                    width: 0,
-                    pageX: 0,
-                    pageY: 0
-                },
-                viewTransform: vt,
-                isScaling: false,
-                initialDistance: 1,
-                initialTransform: (0, _util.createIdentityTransform)(),
-                initialScale: props.initialZoom,
-                initialTranslation: {
-                    x: 0,
-                    y: 0
-                },
-                isMoving: false,
-                initialGestureState: {
-                    dx: 0,
-                    dy: 0
-                },
-                TranslationAnimation: new _reactNative.Animated.ValueXY({
-                    x: vt.translateX,
-                    y: vt.translateY
-                }),
-                scaleAnimation: new _reactNative.Animated.Value(vt.scaleX)
-            };
-            return _this;
-        }
-
-        _createClass(SvgPanZoom, [{
-            key: "componentWillMount",
-            value: function componentWillMount() {
-                var _this2 = this;
-
-                this.state.scaleAnimation.addListener(function (zoom) {
-                    _this2.props.onZoom(zoom.value);
-                });
-                this.prInstance = _reactNative.PanResponder.create({
-                    onStartShouldSetPanResponder: function onStartShouldSetPanResponder(evt, gestureState) {
-                        return false;
-                    },
-                    onStartShouldSetPanResponderCapture: function onStartShouldSetPanResponderCapture(evt, gestureState) {
-                        return false;
-                    },
-                    onMoveShouldSetPanResponder: function onMoveShouldSetPanResponder(evt, gestureState) {
-                        return true;
-                    },
-                    onMoveShouldSetPanResponderCapture: function onMoveShouldSetPanResponderCapture(evt, gestureState) {
-                        return false;
-                    },
-                    onPanResponderGrant: function onPanResponderGrant(evt, gestureState) {
-                        if (_this2.prTargetSelf == null) {
-                            if (_this2.prTargetOuter == null) {
-                                _this2.prTargetOuter = evt.currentTarget;
-                            }
-
-                            if (evt.target !== evt.currentTarget) {
-                                _this2.prTargetSelf = evt.target;
-                            }
-                        }
-                    },
-                    onPanResponderMove: function onPanResponderMove(evt, gestureState) {
-                        var touches = evt.nativeEvent.touches;
-
-                        if (_this2.dropNextEvt > 0) {
-                            _this2.dropNextEvt--;
-                            return;
-                        }
-
-                        if (evt.target !== _this2.prTargetSelf && evt.target !== _this2.prTargetOuter) {
-                            _this2.dropNextEvt++;
-                            return;
-                        }
-
-                        if (Math.abs(gestureState.vx) + Math.abs(gestureState.vx) > 6) {
-                            _this2.dropNextEvt++;
-                            return;
-                        }
-
-                        if (touches.length === 2) {
-                            _this2.processPinch(touches[0].pageX, touches[0].pageY, touches[1].pageX, touches[1].pageY);
-                        } else if (touches.length === 1 && !_this2.state.isScaling) {
-                            _this2.processTouch(gestureState);
-                        }
-                    },
-                    onPanResponderTerminationRequest: function onPanResponderTerminationRequest(evt, gestureState) {
-                        return true;
-                    },
-                    onPanResponderRelease: function onPanResponderRelease(evt, gestureState) {
-                        _this2.setState({
-                            isScaling: false,
-                            isMoving: false
-                        });
-                    },
-                    onPanResponderTerminate: function onPanResponderTerminate(evt, gestureState) {}
-                });
+              if (evt.target !== evt.currentTarget) {
+                _this2.prTargetSelf = evt.target;
+              }
             }
-        }, {
-            key: "render",
-            value: function render() {
-                var _this3 = this;
+          },
+          onPanResponderMove: function onPanResponderMove(evt, gestureState) {
+            var touches = evt.nativeEvent.touches;
 
-                var _props = this.props,
-                    canvasHeight = _props.canvasHeight,
-                    canvasWidth = _props.canvasWidth,
-                    viewStyle = _props.viewStyle,
-                    canvasStyle = _props.canvasStyle,
-                    children = _props.children;
-                return _react3.default.createElement(
-                    _reactNative.View,
-                    _extends({
-                        ref: function ref(v) {
-                            return _this3.mainViewRef = v;
-                        },
-                        style: _reactNative.StyleSheet.flatten([{
-                            flex: 1,
-                            justifyContent: 'flex-start',
-                            alignItems: 'flex-start'
-                        }, viewStyle]),
-                        onLayout: this._onLayout
-                    }, this.prInstance.panHandlers, {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 233
-                        }
-                    }),
-                    _react3.default.createElement(
-                        _reactNative.Animated.View,
-                        {
-                            style: _extends({
-                                width: canvasWidth,
-                                height: canvasHeight,
-                                transform: [{
-                                    translateX: this.state.TranslationAnimation.x
-                                }, {
-                                    translateY: this.state.TranslationAnimation.y
-                                }, {
-                                    scale: this.state.scaleAnimation
-                                }]
-                            }, canvasStyle),
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 242
-                            }
-                        },
-                        children
-                    )
-                );
+            if (_this2.dropNextEvt > 0) {
+              _this2.dropNextEvt--;
+              return;
             }
-        }, {
-            key: "getInitialViewTransform",
-            value: function getInitialViewTransform(canvasWidth, canvasHeight, scale) {
-                return (0, _util.viewTransformMult)((0, _util.createTranslationMatrix)(-(canvasWidth - canvasWidth * scale) / 2, -(canvasHeight - canvasHeight * scale) / 2), (0, _util.createScalingMatrix)(scale));
+
+            if (evt.target !== _this2.prTargetSelf && evt.target !== _this2.prTargetOuter) {
+              _this2.dropNextEvt++;
+              return;
             }
-        }]);
 
-        return SvgPanZoom;
-    }(_react2.Component));
+            if (Math.abs(gestureState.vx) + Math.abs(gestureState.vx) > 6) {
+              _this2.dropNextEvt++;
+              return;
+            }
 
-    exports.default = SvgPanZoom;
-    SvgPanZoom.defaultProps = {
-        canvasHeight: 1080,
-        canvasWidth: 720,
-        minScale: 0.5,
-        maxScale: 1.0,
-        initialZoom: 0.7,
-        canvasStyle: {},
-        viewStyle: {},
-        onZoom: function onZoom(zoom) {}
-    };
-},816,[110,176,14,769,817],"react-native-svg-pan-zoom/SvgPanZoom.js");
+            if (touches.length === 2) {
+              _this2.processPinch(touches[0].pageX, touches[0].pageY, touches[1].pageX, touches[1].pageY);
+            } else if (touches.length === 1 && !_this2.state.isScaling) {
+              _this2.processTouch(gestureState);
+            }
+          },
+          onPanResponderTerminationRequest: function onPanResponderTerminationRequest(evt, gestureState) {
+            return true;
+          },
+          onPanResponderRelease: function onPanResponderRelease(evt, gestureState) {
+            _this2.setState({
+              isScaling: false,
+              isMoving: false
+            });
+          },
+          onPanResponderTerminate: function onPanResponderTerminate(evt, gestureState) {}
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this3 = this;
+
+        var _props = this.props,
+            canvasHeight = _props.canvasHeight,
+            canvasWidth = _props.canvasWidth,
+            viewStyle = _props.viewStyle,
+            canvasStyle = _props.canvasStyle,
+            children = _props.children;
+        return _react3.default.createElement(
+          _reactNative.View,
+          _extends({
+            ref: function ref(v) {
+              return _this3.mainViewRef = v;
+            },
+            style: _reactNative.StyleSheet.flatten([{
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "flex-start"
+            }, viewStyle]),
+            onLayout: this._onLayout
+          }, this.prInstance.panHandlers, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 304
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.Animated.View,
+            {
+              style: _extends({
+                width: canvasWidth,
+                height: canvasHeight,
+                transform: [{
+                  translateX: this.state.TranslationAnimation.x
+                }, {
+                  translateY: this.state.TranslationAnimation.y
+                }, {
+                  scale: this.state.scaleAnimation
+                }]
+              }, canvasStyle),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 317
+              }
+            },
+            children
+          )
+        );
+      }
+    }, {
+      key: "getInitialViewTransform",
+      value: function getInitialViewTransform(canvasWidth, canvasHeight, scale) {
+        var adjustWidth = width / 2 - canvasWidth * scale / 2;
+        var adjustHeight = height / 2 - canvasHeight * scale / 2;
+        var test = (0, _util.viewTransformMult)((0, _util.createTranslationMatrix)(-((canvasWidth - canvasWidth * scale) / 2 - adjustWidth), -((canvasHeight - canvasHeight * scale) / 2 - adjustHeight)), (0, _util.createScalingMatrix)(scale));
+        console.log(test);
+        return test;
+      }
+    }]);
+
+    return SvgPanZoom;
+  }(_react2.Component));
+
+  exports.default = SvgPanZoom;
+  SvgPanZoom.defaultProps = {
+    canvasHeight: 1080,
+    canvasWidth: 720,
+    minScale: 0.5,
+    maxScale: 1.0,
+    initialZoom: 0.7,
+    canvasStyle: {},
+    viewStyle: {},
+    onZoom: function onZoom(zoom) {}
+  };
+},824,[110,176,14,769,825],"react-native-svg-pan-zoom/SvgPanZoom.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -110191,7 +110203,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         boundedTransform.translateY = Math.min(Math.max(boundedTransform.translateY, minBounds.y), maxBounds.y);
         return boundedTransform;
     }
-},817,[],"react-native-svg-pan-zoom/util.js");
+},825,[],"react-native-svg-pan-zoom/util.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -110207,7 +110219,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   });
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},818,[819],"react-native-svg-pan-zoom/shapes/index.js");
+},826,[827],"react-native-svg-pan-zoom/shapes/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -110217,11 +110229,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _react3 = _interopRequireDefault(_react2);
 
-    var _index = require(_dependencyMap[1], "./../../react-transform-hmr/lib/index.js");
+    var _index = require(_dependencyMap[1], "./../../../../node_modules/react-transform-hmr/lib/index.js");
 
     var _index2 = _interopRequireDefault(_index);
 
-    var _jsxFileName = "d:\\reactNative\\unibul-colors\\node_modules\\react-native-svg-pan-zoom\\shapes\\ResponderElement.js";
+    var _jsxFileName = "d:\\reactNative\\unibul-colors\\src\\modified_nodes\\react-native-svg-pan-zoom\\shapes\\ResponderElement.js";
 
     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -110241,8 +110253,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
     };
 
-    var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-        filename: "d:/reactNative/unibul-colors/node_modules/react-native-svg-pan-zoom/shapes/ResponderElement.js",
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "d:/reactNative/unibul-colors/src/modified_nodes/react-native-svg-pan-zoom/shapes/ResponderElement.js",
         components: _components,
         locals: [module],
         imports: [_react3.default]
@@ -110250,7 +110262,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     function _wrapComponent(id) {
         return function (Component) {
-            return _reactTransformHmrLibIndexJs2(Component, id);
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
         };
     }
 
@@ -110327,7 +110339,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         onClickCanceled: function onClickCanceled(evt) {},
         onDrag: function onDrag(evt) {}
     };
-},819,[110,176,769],"react-native-svg-pan-zoom/shapes/ResponderElement.js");
+},827,[110,176,769],"react-native-svg-pan-zoom/shapes/ResponderElement.js");
 require(25);
 require(11);
 //# sourceMappingURL=AppEntry.map
